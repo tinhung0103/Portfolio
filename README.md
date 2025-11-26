@@ -1,3 +1,6 @@
+[Home](README.md) • [Projects](#-academic--lab-projects) • [About](#hi-im-tin-hung-lam-) • [Contact](#-contact)
+
+
 # Hi, I'm Tin Hung Lam 👋  
 ### Network Administration • Cybersecurity • Systems & Infrastructure
 
