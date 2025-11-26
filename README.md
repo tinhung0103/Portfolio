@@ -51,6 +51,7 @@ Below are my hands-on projects, each documented in detail.
 
 ### 🔹 [Network Services Deployment (2024–2025)](projects/network-services-deployment.md)  
 Built a Windows Server 2022 multi-server environment with AD, DNS, DHCP, VPN, RADIUS, NAT, and IIS.
+👉
 
 ### 🔹 [SharePoint Administration (2024–2025)](projects/sharepoint-admin.md)  
 Configured SharePoint sites, libraries, permissions, and local search services.
@@ -90,214 +91,249 @@ Implemented iSCSI target storage and integrated it with Windows File Services.
 
 # ---- Project files ----
 
-# Network Services Deployment (2024–2025)
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
 
-This project involved building a full Windows Server 2022 network infrastructure with multiple integrated services, following enterprise design standards.
+# 🌐 Network Services Deployment (2024–2025)
 
-## 🔧 Technologies & Services
-- Active Directory Domain Services (AD DS)
-- DNS, DHCP, NAT
-- VPN (L2TP / SSTP)
-- RADIUS Authentication
-- IIS Web Hosting
-- Group Policy Management
+## 📌 Overview
+Built a complete Windows Server 2022 enterprise environment including centralized authentication, IP management, secure VPN access, and web hosting. This project simulates a real corporate multi-server infrastructure following Microsoft best practices.
 
-## 🏗 What I Built
-- Deployed multi-server architecture with domain controllers and member servers
-- Configured DNS zones, DHCP scopes, and failover policies
-- Set up VPN access with secure authentication
-- Implemented RADIUS for centralized authentication
-- Hosted multiple IIS websites with routing rules and permissions
+## 🎯 Objectives
+- Deploy AD DS domain with domain controllers and member servers  
+- Configure DNS, DHCP, NAT, and VPN services  
+- Implement RADIUS authentication using NPS  
+- Host internal web applications through IIS  
+- Apply group policies for security and automation  
 
-## 📌 Key Outcomes
-- Fully functional enterprise network environment
-- Secure, scalable configuration following best practices
-- Improved understanding of authentication, PKI, and network services
+## 🧰 Tools & Technologies
+- Windows Server 2022  
+- Active Directory, DNS, DHCP  
+- RADIUS / NPS  
+- L2TP, SSTP VPN  
+- IIS Web Server  
+- Group Policy  
+
+## ⭐ Highlights
+- Built a scalable multi-role server architecture  
+- Enabled certificate-based VPN authentication  
+- Created reliable DNS/DHCP infrastructure with failover  
+- Hosted multiple IIS websites with permissions and routing rules  
+- Developed hands-on enterprise IT administration experience  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 📘 SharePoint Administration (2024–2025)
+
+## 📌 Overview
+Configured and managed a SharePoint Server environment to support document management, metadata structures, workflow automation, and team collaboration.
+
+## 🎯 Objectives
+- Create and configure SharePoint site collections  
+- Implement content types and metadata-driven organization  
+- Build automated lists and workflows  
+- Enable local search and indexing  
+
+## 🧰 Tools & Technologies
+- SharePoint Server / SharePoint Online  
+- Lists, Libraries, Content Types  
+- Permissions & Access Control  
+- Search Configuration  
+
+## ⭐ Highlights
+- Designed structured information architecture  
+- Configured permissions and security trimming  
+- Built workflow-enabled lists for automation  
+- Enabled fast and accurate search experience  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🔐 Network Security Project (2024–2025)
+
+## 📌 Overview
+Hardened a Cisco enterprise network using AAA authentication, secure routing, centralized logging, and IPsec VPN connectivity.  
+This project applied layered security controls aligned with enterprise standards.
+
+## 🎯 Objectives
+- Secure network routing with OSPF authentication  
+- Implement AAA and RADIUS for device login control  
+- Configure SYSLOG for centralized monitoring  
+- Deploy 802.1X port-based security  
+- Create a secure site-to-site VPN  
+
+## 🧰 Tools & Technologies
+- Cisco IOS  
+- OSPF  
+- AAA + RADIUS  
+- SYSLOG  
+- 802.1X  
+- IPsec VPN  
+
+## ⭐ Highlights
+- Integrated RADIUS authentication for secure admin access  
+- Enabled centralized logging for network visibility  
+- Implemented 802.1X endpoint security  
+- Established encrypted site-to-site VPN tunnel  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🧾 Active Directory Services (2024–2025)
+
+## 📌 Overview
+Built and managed an enterprise Active Directory domain including identity management, remote-site security, and inter-domain trust relationships.
+
+## 🎯 Objectives
+- Structure AD DS with users, groups, and OUs  
+- Apply GPOs for security and workstation control  
+- Deploy Read-Only Domain Controller (RODC)  
+- Create forest trust relationships  
+
+## 🧰 Tools & Technologies
+- Windows Server 2022  
+- AD DS  
+- Group Policy  
+- RODC  
+- Forest Trusts  
+
+## ⭐ Highlights
+- Designed a scalable AD hierarchy  
+- Applied GPOs for security hardening  
+- Deployed RODC for branch-site protection  
+- Established secure forest trust relationship  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🐧 Linux Administration (2023–2024)
+
+## 📌 Overview
+Maintained and configured a CentOS Linux environment focusing on user management, permissions, automation, and system troubleshooting.
+
+## 🎯 Objectives
+- Manage users, groups, and permissions  
+- Automate tasks using cron  
+- Configure services and scheduled tasks  
+- Troubleshoot system and network configurations  
+
+## 🧰 Tools & Technologies
+- CentOS / RHEL  
+- Bash scripting  
+- Cron  
+- Systemctl, firewall-cmd  
+
+## ⭐ Highlights
+- Built automated backup systems  
+- Hardened access control through permissions  
+- Troubleshot services and file system issues  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🛰 Multi-Area OSPF & EIGRP Lab
+
+## 📌 Overview
+Designed an enterprise routing environment using multi-area OSPF and EIGRP, including redistribution, prefix filtering, and timer optimization.
+
+## 🎯 Objectives
+- Build multi-area OSPF hierarchy  
+- Connect EIGRP and OSPF domains with redistribution  
+- Implement prefix-lists for routing control  
+- Improve convergence by tuning routing timers  
+
+## 🧰 Tools & Technologies
+- Cisco IOS  
+- OSPF multi-area  
+- EIGRP  
+- Prefix-lists  
+- Route filtering  
+- Timer tuning  
+
+## ⭐ Highlights
+- Implemented stable redistribution strategy  
+- Reduced convergence time using optimized timers  
+- Increased routing security using passive interfaces  
+- Prevented loops with prefix-based filtering  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🔒 VPN & DirectAccess Implementation
+
+## 📌 Overview
+Built a secure remote access solution using RRAS VPN and Microsoft DirectAccess to ensure seamless, always-on connectivity for domain-joined clients.
+
+## 🎯 Objectives
+- Deploy RRAS for VPN services  
+- Configure full DirectAccess solution  
+- Implement certificate-based authentication  
+- Apply Group Policies for remote access behavior  
+
+## 🧰 Tools & Technologies
+- Windows Server 2022  
+- RRAS  
+- DirectAccess  
+- PKI / Certificates  
+- Group Policy  
+- IP-HTTPS  
+
+## ⭐ Highlights
+- Enabled seamless DirectAccess connectivity  
+- Configured auto-enrollment for PKI certificates  
+- Applied firewall and connection policies via GPO  
+- Verified internal/external connectivity  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🌐 BGP IPv6 Path Manipulation Lab
+
+## 📌 Overview
+Configured IPv6 BGP routing and manipulated inbound and outbound path selection using various BGP policy tools.
+
+## 🎯 Objectives
+- Establish IPv6 BGP peering  
+- Control outbound routing using local preference  
+- Influence inbound routing via AS-path prepend  
+- Use prefix-lists to filter traffic  
+
+## 🧰 Tools & Technologies
+- Cisco IOS  
+- BGP IPv6  
+- Prefix-lists  
+- Route-maps  
+- Local preference  
+- AS-path prepend  
+
+## ⭐ Highlights
+- Achieved full control of routing direction  
+- Applied dual policy (inbound & outbound)  
+- Improved routing stability through refined prefix filtering  
+
+[⬅ Back to Home](../README.md) | [All Projects](../README.md#-academic--lab-projects)
+
+# 🗄 iSCSI Storage & File Server Lab
+
+## 📌 Overview
+Implemented centralized storage using an iSCSI target and connected it to a Windows File Server for controlled and secure resource sharing.
+
+## 🎯 Objectives
+- Deploy iSCSI target virtual disks  
+- Configure Windows Server as an initiator  
+- Set NTFS and share-level permissions  
+- Implement quotas and file screening  
+
+## 🧰 Tools & Technologies
+- Windows Server 2022  
+- iSCSI Target Server  
+- File Services / NTFS  
+- SMB Shares  
+- Disk Management  
+
+## ⭐ Highlights
+- Built SAN-style storage with iSCSI  
+- Enforced quotas and screening for compliance  
+- Integrated virtual storage into file server workloads  
 
 
-# SharePoint Administration (2024–2025)
-
-Designed and configured a SharePoint environment for document management and collaboration.
-
-## 🔧 Tools & Technologies
-- SharePoint Server / SharePoint Online
-- Lists, Libraries, Site Collections
-- Content Types
-- Local Search Configuration
-
-## 🏗 What I Built
-- Created site collections with custom permissions
-- Designed document libraries and metadata structures
-- Built custom SharePoint lists with workflow logic
-- Enabled and configured local search indexing
-
-## 📌 Key Outcomes
-- Efficient information architecture
-- Accurate permissions and security trimming
-- Improved team collaboration and data organization
 
 
-# Network Security Project (2024–2025)
-
-Implemented multiple layers of security on a Cisco enterprise network.
-
-## 🔧 Technologies Used
-- Cisco IOS, OSPF
-- AAA, RADIUS
-- SYSLOG
-- 802.1X Authentication
-- Firewall rules
-- IPsec Site-to-Site VPN
-
-## 🏗 What I Built
-- Multi-area OSPF routing with authentication
-- AAA-based device access control
-- Centralized SYSLOG monitoring
-- 802.1X port-based security
-- Site-to-site VPN between two branches
-
-## 📌 Key Outcomes
-- Hardened enterprise topology
-- Improved visibility through centralized logging
-- Secure authentication at device and port level
 
 
-# Active Directory Services (2024–2025)
 
-Configured an enterprise Windows domain environment focusing on identity management and domain trust.
-
-## 🔧 Technologies Used
-- Active Directory Domain Services
-- Group Policy (GPOs)
-- RODC Deployment
-- Forest Trusts
-
-## 🏗 What I Built
-- Managed users, groups, and OUs
-- Deployed GPOs for password, security, and software policies
-- Implemented RODC for remote site security
-- Created and validated forest trust relationships
-
-## 📌 Key Outcomes
-- Strong identity and policy management skills
-- Secure AD architecture for multi-site environments
-
-
-# Linux Administration (2023–2024)
-
-Configured and maintained a CentOS virtual machine for system administration tasks.
-
-## 🔧 Technologies Used
-- CentOS / RHEL-based systems
-- Bash scripting
-- File system permissions
-- Cron scheduling
-
-## 🏗 What I Built
-- User and group management systems
-- Automated backup scripts
-- File permission configurations
-- Network and service troubleshooting
-
-## 📌 Key Outcomes
-- Improved familiarity with Linux environments
-- Strong command-line and scripting foundations
-
-
-# Multi-Area OSPF & EIGRP Lab
-
-Designed a multi-area dynamic routing environment using Cisco routers, optimized routing behavior, and implemented best practices.
-
-## 🔧 Technologies Used
-- Cisco IOS
-- OSPF (multi-area)
-- EIGRP
-- Prefix-lists & route filtering
-- Clocking & timer tuning
-
-## 🏗 What I Built
-- Multi-area OSPF backbone with area segmentation
-- EIGRP domain connected via redistribution
-- Prefix-lists for route filtering and redistribution control
-- Tuned hello/dead timers to optimize convergence
-- Used passive interfaces to secure routing ads
-
-## 📌 Key Outcomes
-- Deep understanding of OSPF area design
-- Hands-on experience with redistribution challenges
-- Improved routing stability and performance
-
-
-# VPN & DirectAccess Implementation
-
-Configured secure remote access for domain-joined Windows clients using RRAS, certificates, and Group Policy enforcement.
-
-## 🔧 Technologies Used
-- RRAS (Remote Access Service)
-- DirectAccess
-- Certificates / PKI
-- Group Policy Management
-- IP-HTTPS, NAT64/DNS64
-
-## 🏗 What I Built
-- Enabled RRAS for VPN services
-- Configured DirectAccess for seamless remote connectivity
-- Implemented certificate authentication and auto-enrollment
-- Built Group Policies for NCA, firewall, and connection rules
-- Tested connectivity through internal and external networks
-
-## 📌 Key Outcomes
-- End-to-end remote access solution
-- Strong understanding of Microsoft DirectAccess architecture
-- Hardened certificate-based authentication workflow
-
-
-# BGP IPv6 Path Manipulation Lab
-
-Explored IPv6 BGP behaviors and manipulated routing decisions using common policy tools.
-
-## 🔧 Technologies Used
-- Cisco IOS
-- BGP IPv6
-- Route-maps
-- Local Preference
-- AS-Path Prepending
-- Prefix-lists
-
-## 🏗 What I Built
-- BGP neighbor establishment with IPv6
-- Controlled outbound traffic using local-pref policies
-- Influenced inbound routing with AS-prepend
-- Implemented prefix-lists to manage advertisements
-- Observed BGP path selection and failover behavior
-
-## 📌 Key Outcomes
-- Strong understanding of BGP policy tools
-- Ability to control both inbound and outbound paths
-- Practical analysis of IPv6 routing logic
-
-
-# iSCSI Storage & File Server Lab
-
-Implemented centralized network storage using an iSCSI Target Server and integrated it with a Windows File Server.
-
-## 🔧 Technologies Used
-- Windows Server 2022
-- iSCSI Target Server
-- File Services & NTFS Permissions
-- Disk Management
-- SMB Shares
-
-## 🏗 What I Built
-- Configured an iSCSI target and virtual disks
-- Added iSCSI initiator connections to a file server
-- Implemented shared folders with NTFS + share permissions
-- Set up quotas and file screening policies
-- Ensured redundancy and security for storage access
-
-## 📌 Key Outcomes
-- Hands-on iSCSI experience
-- Secure and centralized storage provisioning
-- Better understanding of backend storage for enterprise environments
 
 
