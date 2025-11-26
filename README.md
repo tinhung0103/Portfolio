@@ -1,30 +1,3 @@
-#!/usr/bin/env bash
-# create-portfolio.sh
-# Usage:
-#   ./create-portfolio.sh                     # creates ./Portfolio and commits locally
-#   REMOTE_URL=git@github.com:you/Portfolio.git ./create-portfolio.sh
-#   or: REMOTE_URL=https://github.com/you/Portfolio.git ./create-portfolio.sh
-#
-# Note: run this in the directory where you want the repo folder created.
-
-set -euo pipefail
-
-# Config - change these as desired
-REPO_NAME="${REPO_NAME:-Portfolio}"
-AUTHOR_NAME="${AUTHOR_NAME:-Tin Hung Lam}"
-AUTHOR_EMAIL="${AUTHOR_EMAIL:-tinhung4971@gmail.com}"
-REMOTE_URL="${REMOTE_URL:-}"   # optional: set as environment variable or edit above
-GIT_BRANCH="${GIT_BRANCH:-main}"
-
-# Create repo folder
-mkdir -p "$REPO_NAME"
-cd "$REPO_NAME"
-
-# Create projects folder
-mkdir -p projects
-
-# ---- Main README.md ----
-cat > README.md <<'EOF'
 # Hi, I'm Tin Hung Lam 👋  
 ### Network Administration • Cybersecurity • Systems & Infrastructure
 
@@ -110,11 +83,10 @@ Implemented iSCSI target storage and integrated it with Windows File Services.
 - **Email:** tinhung4971@gmail.com  
 - **LinkedIn:** www.linkedin.com/in/tin-hung-lam-344344354  
 - **Location:** Montreal, Canada
-EOF
+
 
 # ---- Project files ----
 
-cat > projects/network-services-deployment.md <<'EOF'
 # Network Services Deployment (2024–2025)
 
 This project involved building a full Windows Server 2022 network infrastructure with multiple integrated services, following enterprise design standards.
@@ -138,9 +110,8 @@ This project involved building a full Windows Server 2022 network infrastructure
 - Fully functional enterprise network environment
 - Secure, scalable configuration following best practices
 - Improved understanding of authentication, PKI, and network services
-EOF
 
-cat > projects/sharepoint-admin.md <<'EOF'
+
 # SharePoint Administration (2024–2025)
 
 Designed and configured a SharePoint environment for document management and collaboration.
@@ -161,9 +132,8 @@ Designed and configured a SharePoint environment for document management and col
 - Efficient information architecture
 - Accurate permissions and security trimming
 - Improved team collaboration and data organization
-EOF
 
-cat > projects/network-security.md <<'EOF'
+
 # Network Security Project (2024–2025)
 
 Implemented multiple layers of security on a Cisco enterprise network.
@@ -187,9 +157,8 @@ Implemented multiple layers of security on a Cisco enterprise network.
 - Hardened enterprise topology
 - Improved visibility through centralized logging
 - Secure authentication at device and port level
-EOF
 
-cat > projects/active-directory.md <<'EOF'
+
 # Active Directory Services (2024–2025)
 
 Configured an enterprise Windows domain environment focusing on identity management and domain trust.
@@ -209,9 +178,8 @@ Configured an enterprise Windows domain environment focusing on identity managem
 ## 📌 Key Outcomes
 - Strong identity and policy management skills
 - Secure AD architecture for multi-site environments
-EOF
 
-cat > projects/linux-admin.md <<'EOF'
+
 # Linux Administration (2023–2024)
 
 Configured and maintained a CentOS virtual machine for system administration tasks.
@@ -231,9 +199,8 @@ Configured and maintained a CentOS virtual machine for system administration tas
 ## 📌 Key Outcomes
 - Improved familiarity with Linux environments
 - Strong command-line and scripting foundations
-EOF
 
-cat > projects/multi-area-ospf-eigrp.md <<'EOF'
+
 # Multi-Area OSPF & EIGRP Lab
 
 Designed a multi-area dynamic routing environment using Cisco routers, optimized routing behavior, and implemented best practices.
@@ -256,9 +223,8 @@ Designed a multi-area dynamic routing environment using Cisco routers, optimized
 - Deep understanding of OSPF area design
 - Hands-on experience with redistribution challenges
 - Improved routing stability and performance
-EOF
 
-cat > projects/vpn-directaccess.md <<'EOF'
+
 # VPN & DirectAccess Implementation
 
 Configured secure remote access for domain-joined Windows clients using RRAS, certificates, and Group Policy enforcement.
@@ -281,9 +247,8 @@ Configured secure remote access for domain-joined Windows clients using RRAS, ce
 - End-to-end remote access solution
 - Strong understanding of Microsoft DirectAccess architecture
 - Hardened certificate-based authentication workflow
-EOF
 
-cat > projects/bgp-ipv6-path-manipulation.md <<'EOF'
+
 # BGP IPv6 Path Manipulation Lab
 
 Explored IPv6 BGP behaviors and manipulated routing decisions using common policy tools.
@@ -307,9 +272,8 @@ Explored IPv6 BGP behaviors and manipulated routing decisions using common polic
 - Strong understanding of BGP policy tools
 - Ability to control both inbound and outbound paths
 - Practical analysis of IPv6 routing logic
-EOF
 
-cat > projects/iscsi-file-server.md <<'EOF'
+
 # iSCSI Storage & File Server Lab
 
 Implemented centralized network storage using an iSCSI Target Server and integrated it with a Windows File Server.
@@ -332,54 +296,5 @@ Implemented centralized network storage using an iSCSI Target Server and integra
 - Hands-on iSCSI experience
 - Secure and centralized storage provisioning
 - Better understanding of backend storage for enterprise environments
-EOF
 
-# ---- .gitignore & license optional ----
-cat > .gitignore <<'EOF'
-# common
-.DS_Store
-node_modules/
-*.log
 
-# editor
-.vscode/
-.idea/
-*.swp
-EOF
-
-cat > LICENSE <<'EOF'
-MIT License
-
-Copyright (c) $(date +%Y) ${AUTHOR_NAME}
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
-(You may replace this with your preferred license text)
-EOF
-
-# ---- initialize git ----
-if [ -d .git ]; then
-  echo "Git repo already initialized."
-else
-  git init -b "$GIT_BRANCH"
-  git config user.name "${AUTHOR_NAME}"
-  git config user.email "${AUTHOR_EMAIL}"
-  git add .
-  git commit -m "Initial commit: Portfolio README + project pages"
-  echo "Created local git repo and performed initial commit on branch $GIT_BRANCH."
-fi
-
-# ---- optional remote ----
-if [ -n "$REMOTE_URL" ]; then
-  if git remote | grep -q origin; then
-    echo "Remote 'origin' already exists. Skipping adding remote."
-  else
-    git remote add origin "$REMOTE_URL"
-    echo "Added remote origin -> $REMOTE_URL"
-    echo "To push: git push -u origin $GIT_BRANCH"
-  fi
-else
-  echo "No REMOTE_URL provided. If you want to push to GitHub, set REMOTE_URL env var or add remote manually."
-fi
-
-echo "Done. Your portfolio repo is ready at: $(pwd)"
